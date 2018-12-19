@@ -47,6 +47,10 @@ main h2 {
 main p {
   font-size: 20px;
   line-height: 30px;
+  margin-bottom: 20px;
+}
+
+main p:last-of-type {
   margin-bottom: 40px;
 }
 
@@ -54,7 +58,7 @@ main section {
   display: flex;
 }
 
-main section img {
+.intro img {
   height: 50vw;
   width: 50vw;
 }
@@ -86,6 +90,49 @@ button:hover {
   background-color: #ffffff;
 }
 
-/* SpaceCraft section */
+.light,
+.light article,
+.light button {
+  color: #030c15;
+  background-color: #dfe8f5;
+}
 
+.light button {
+  border-color: #030c15;
+}
 
+.light button:hover {
+  color: #ffffff;
+  background-color: #030c15;
+}
+
+main h4 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 36px;
+}
+
+#project {
+  padding: 80px 0;
+  flex: 1.02;
+}
+
+#project .box {
+  margin-left: 7%;
+  width: 70%;
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#app img {
+  width: 80%;
+  border-radius: 8px;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+}
