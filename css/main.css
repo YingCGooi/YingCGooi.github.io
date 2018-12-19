@@ -80,6 +80,10 @@ footer small a {
   border-bottom: 1px solid #ffffff;
 }
 
+#project p a {
+  border-bottom: 1px solid #030c15;
+}
+
 main p a:hover,
 footer p a:hover,
 footer small a:hover {
@@ -230,7 +234,7 @@ strong {
 
 .player-wrapper {
   position: relative;
-  padding-top: 56.25%;
+  padding-top: 57.5%;
 }
 
 /* Footer */
@@ -402,6 +406,11 @@ footer small a {
 
   .intro img {
     width: 100vw;
+  }
+
+  .intro .box {
+    padding: 100px 0;
+    width: 70%;
   }
 
   header > nav {
