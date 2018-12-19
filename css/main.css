@@ -1,0 +1,91 @@
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+/* Top nav bar */
+
+header {
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 36px;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+}
+
+a.email { background-image: url("/images/email.png"); }
+a.linkedin { background-image: url("/images/linkedin.png"); }
+a.github { background-image: url("/images/github.png"); }
+a.medium { background-image: url("/images/medium.png"); }
+
+
+/* main sections */
+
+main {
+  color: #ffffff;
+}
+
+main h2 {
+  margin-bottom: 18px;
+  font-size: 46px;
+  font-weight: 500;
+}
+
+main p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+main section {
+  display: flex;
+}
+
+main section img {
+  height: 50vw;
+  width: 50vw;
+}
+
+main article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #030c15;
+}
+
+.box {
+  width: 60%;
+}
+
+button {
+  padding: 16px 32px;
+  color: #ffffff;
+  font-weight: 500 !important;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 2px solid #ffffff;
+}
+
+button:hover {
+  color: #030c15;
+  background-color: #ffffff;
+}
+
+/* SpaceCraft section */
+
+
