@@ -3,6 +3,10 @@ body {
   font-weight: 300;
 }
 
+.hidden, .mobile {
+  display: none;
+}
+
 /* Top nav bar */
 
 header {
@@ -20,10 +24,18 @@ h1 {
 
 nav a {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 6px;
   width: 35px;
   height: 35px;
   background-size: contain;
+}
+
+nav a:first-of-type {
+  margin-left: 0;
+}
+
+nav a:hover {
+  filter: contrast(70%);
 }
 
 a.email { background-image: url("/images/email.png"); }
@@ -31,30 +43,52 @@ a.linkedin { background-image: url("/images/linkedin.png"); }
 a.github { background-image: url("/images/github.png"); }
 a.medium { background-image: url("/images/medium.png"); }
 
-
+.placeholder {
+  filter: opacity(0%);
+}
 /* main sections */
 
-main {
+main,
+footer {
   color: #ffffff;
 }
 
-main h2 {
+main h2,
+footer h2 {
   margin-bottom: 18px;
-  font-size: 46px;
+  font-size: 45px;
   font-weight: 500;
+  white-space: nowrap;  
 }
 
-main p {
+main p,
+footer p {
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 20px;
 }
 
-main p:last-of-type {
+main p:last-of-type,
+footer p:last-of-type {
   margin-bottom: 40px;
 }
 
-main section {
+main p a,
+footer p a,
+footer small a {
+  font-weight: 500;
+  border-bottom: 1px solid #ffffff;
+}
+
+main p a:hover,
+footer p a:hover,
+footer small a:hover {
+  background-color: #ffffff;
+  color: #030c15;
+}
+
+main section,
+footer {
   display: flex;
 }
 
@@ -63,7 +97,8 @@ main section {
   width: 50vw;
 }
 
-main article {
+main article,
+footer article {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +141,7 @@ button:hover {
   background-color: #030c15;
 }
 
-main h4 {
+h4 {
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -114,8 +149,18 @@ main h4 {
   margin-bottom: 36px;
 }
 
-#project {
-  padding: 80px 0;
+footer h4 {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+
+footer .box {
+  align-self: flex-start;
+}
+
+main article {
+  padding: 100px 0;
   flex: 1.02;
 }
 
@@ -133,6 +178,198 @@ main h4 {
 
 #app img {
   width: 80%;
+}
+
+#project img {
   border-radius: 8px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+#other-projects {
+  align-items: flex-start;
+}
+
+.box.first {
+  width: 70%;
+  margin-left: 10%;
+}
+
+.box.last {
+  margin-left: -10%;
+  width: 70%;
+}
+
+strong {
+  font-weight: 500;
+}
+
+#presentation {
+  position: relative;
+}
+
+#presentation .box {
+  margin-left: 5%;
+  width: 55%;
+}
+
+#presentation article {
+  z-index: 1;
+  position: absolute;
+  width: 36%;
+  height: 100%;
+  background-color: rgba(0, 10, 20, 0.6)
+}
+
+#player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  padding: 80px 10%;
+  background: #030c15;
+}
+
+#more {
+  flex: 2;
+}
+
+#more .box {
+  width: 100%;
+  padding-right: 10%;
+}
+
+#info {
+  flex: 1;
+}
+
+#info .box {
+  width: 100%;
+  padding-left: 25%;
+  border-left: 1px solid #ffffff;  
+}
+
+footer h2 {
+  font-size: 40px;
+}
+
+#info a {
+  filter: invert(100%);
+}
+
+#info a:hover {
+  filter: invert(80%);
+}
+
+footer small {
+  font-size: 12px;
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+}
+
+footer small a {
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1200px) {
+  #app img {
+    width: 90%;
+  }
+
+  .intro article {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .intro img {
+    display: block;
+    height: 100%;
+    width: 40vw;
+    object-fit: cover;
+  }
+
+  .intro .box {
+    padding: 60px 0;
+  }
+
+  #project {
+    flex-direction: column;
+  }
+
+  #project .box {
+    margin: 0;
+  }
+
+  .mobile {
+    display: block;
+    max-width: 100%;
+    margin: 40px 0;
+  }
+
+  #app {
+    display: none; 
+  }
+
+  header > h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 40px !important;
+  }
+
+  main article {
+    padding-top: 70px;
+  }
+
+  #presentation article {
+    padding: 0;
+    width: 40%;
+  }
+
+  #other-projects {
+    padding: 80px 0;
+    flex-direction: column;
+  }
+
+  #other-projects article {
+    padding: 20px 0; 
+  }
+
+  .box.first, .box.last {
+    margin-left: 0;
+  }
+
+  footer {
+    padding: 80px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #more .box {
+    width: 70%;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  #info .box {
+    border: none;
+    border-top: 1px solid #ffffff;
+    margin-top: 40px;
+    padding: 40px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro img {
+    width: 100vw;
+  }
 }

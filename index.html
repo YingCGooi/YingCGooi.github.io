@@ -8,7 +8,7 @@
   <title>Ying Chyi Gooi | Software Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,900" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="images/logo.png" />
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/main.css" />
 </head>
@@ -27,14 +27,21 @@
 
   <main>
     <section class="intro">
-      <img src="images/portrait.jpg" />
+      <div class="image">
+        <img src="images/portrait.jpg" />
+      </div>
       <article>
         <div class="box">
           <h2>Hello, I'm Gooi.</h2>
           <p>
-            I am a software engineer based in Brooklyn, NY. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit ipsum quis ex hendrerit, nec varius sem malesuada. In feugiat tortor felis, nec venenatis ante.
+            I am a software engineer based in Brooklyn, NY.
           </p>
-          <a href="/">
+
+          <p>
+            I co-created of <a href="https://spacecraft-repl.com/" target="_blank"> SpaceCraft</a> &mdash; an open-source, real-time collaborative REPL.
+          </p>
+
+          <a href="/#more">
             <button>
               More about me
             </button>
@@ -43,18 +50,23 @@
       </article>
     </section>
 
-    <section class="light">
-      <article id="project">
+    <section class="light" id="project">
+      <article>
         <div class="box">
           <h4>// Recent Project</h4>
+
+          <img class="mobile" src="images/app.png" />          
+
           <h2>SpaceCraft</h2>
           <p>
-            I co-created SpaceCraft, which is a real-time collaborative REPL (Read-Evaluate-Print-Loop) that enables pair-programming without any additional setup.
+            SpaceCraft is a real-time, collaborative REPL (Read-Evaluate-Print-Loop) that enables pair-programming without any additional setup.
           </p>
           <p>
-            SpaceCraft is built using a Node.js server that manages REPL code evaluation and connects multiple clients through WebSockets. SpaceCraft is deployed with Docker. I also built a reverse proxy to handle multiple sessions. Learn more by clicking on the button below:
+            SpaceCraft is built using a Node.js server that manages REPL code evaluation and connects multiple clients through WebSockets. SpaceCraft is deployed with Docker and designed to scale with multiple sessions using a reverse proxy.
           </p>
-          <a href="https://spacecraft-repl.github.io/whitepaper" target="_blank">
+
+          <p>Read more about the project here:</p>
+          <a href="https://spacecraft-repl.com/whitepaper" target="_blank">
             <button>
               View case study
             </button>
@@ -65,7 +77,122 @@
         <img src="images/app.png" />
       </div>
     </section>
+
+    <section id="presentation">
+      <div style="position:relative;padding-top:56.25%">
+        <div id="player"></div>
+      </div>
+      <article>
+        <div class="box">
+          <h4>// Past event</h4>
+          <h2>Tech Talk</h2>
+          <p>I presented on my journey in building SpaceCraft for <strong>Launch School NYC Meetup @ Digital Ocean</strong> on November 26, 2018.</p>
+          <p></p>
+        </div>
+      </article>      
+    </section>
+
+    <section class="light" id="other-projects">
+      <article>
+        <div class="box first">
+          <h4>// Other projects</h4>
+          <h2>Airline Routes</h2>
+          <p>A React web application that displays information on routes flown by major airlines, with a clickable SVG map that can filter routes.</p>
+
+          <p>The SVG map component is written with Vanilla JavaScript to improve rendering time from ~400ms to ~80ms.</p>
+
+          <a href="https://github.com/YingCGooi/airline-routes-react" target="_blank">
+            <button>View on Github</button>
+          </a>
+        </div>
+      </article>
+      <article>
+        <div class="box last">
+          <h4 class="placeholder">_</h4>
+          <h2>Coin Exchange</h2>
+          <p>A mock digital currency exchange application that allows users to buy or sell mock digital currencies based on real-time market data.</p>
+
+          <p>The back-end is built with Sinatra framework and integrated with CryptoCompare API to track cryptocurrency prices.</p>
+          <a href="https://github.com/YingCGooi/coin_exchange" target="_blank">
+            <button>View on Github</button>
+          </a>
+        </div>
+      </article>
+    </section>
   </main>
 
+  <footer>
+    <article id="more">
+      <div class="box">
+        <h2>More About Me</h2>
+        <p>
+          I am a full-stack developer with experience in client-server state synchronization, container-based deployment and reverse proxies. I have years of experience with Ruby and JavaScript and proficient in WebSockets, Docker, Ruby on Rails, React and SQL.
+        </p>
+
+        <p>
+          Fun fact: I can solve a Rubik's Cube in <a href="https://www.youtube.com/embed/T-27imipklY?start=84" target="_blank"> 30 seconds</a>.
+        </p>
+
+        <a href="/" target="_blank">          
+          <button>Resume</button>
+        </a>
+      </div>
+    </article>
+    <article id="info">
+      <div class="box">
+        <h2>Ying Chyi Gooi</h2>
+        <h4>// Brooklyn, NY</h4>
+        <h2>Let's Connect</h2>
+        <p>gooiyingchyi@gmail.com</p>
+        <nav>
+          <a class="linkedin" href="https://www.linkedin.com/in/ying-chyi-gooi-89ba5095/" target="_blank"></a>
+          <a class="github" href="https://github.com/yingcgooi" target="_blank"></a>
+          <a class="medium" href="https://medium.com/@gooiyingchyi" target="_blank"></a>
+        </nav>
+      </div>
+    </article>
+    <small>
+      Design by 
+      <a class="designer-link" href="https://www.instagram.com/linzimurray.creative/" target="_blank">
+        linzimurray.creative
+      </a>
+    </small>
+  </footer>  
+
+  <script>
+    const $ = (element) => document.querySelector(element);
+    const tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    const firstScriptTag = $('script');
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    let player = null;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        videoId: 'uxZD4l9bCEM',
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) { } 
+    // needs to be defined in global scope
+
+    function onPlayerStateChange(event) {
+      const state = YT.PlayerState;
+      if ([state.UNSTARTED, state.PLAYING].includes(event.data)) {
+        $('#presentation article').classList.add('hidden');
+      }
+      if (event.data === state.PAUSED) {
+        $('#presentation article').classList.remove('hidden');
+      }
+    }
+  </script>
 </body>
 </html>
