@@ -401,6 +401,15 @@ footer small a {
 }
 
 @media screen and (max-width: 640px) {
+  main p {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+
   .intro {
     flex-direction: column;
   }
