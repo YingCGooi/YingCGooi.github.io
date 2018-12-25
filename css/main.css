@@ -84,6 +84,11 @@ footer small a {
   border-bottom: 1px solid #030c15;
 }
 
+#project p a:hover {
+  background-color: #030c15;
+  color: #ffffff;
+}
+
 main p a:hover,
 footer p a:hover,
 footer small a:hover {
@@ -269,11 +274,11 @@ footer h2 {
   font-size: 40px;
 }
 
-#info a {
+#info nav a {
   filter: invert(100%);
 }
 
-#info a:hover {
+#info nav a:hover {
   filter: invert(80%);
 }
 
@@ -336,8 +341,8 @@ footer small a {
     font-size: 36px;
   }
 
-  h2 {
-    font-size: 40px !important;
+  article h2 {
+    font-size: 40px;
   }
 
   main article {
@@ -433,5 +438,13 @@ footer small a {
 
   header > nav {
     display: none;
+  }
+
+  article h2 {
+    font-size: 40px;
+  }
+
+  #info h2 {
+    font-size: 30px;
   }
 }
