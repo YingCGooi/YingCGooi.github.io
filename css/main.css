@@ -107,6 +107,13 @@ footer {
   width: 50vw;
 }
 
+h2 img {
+  display: inline-block;
+  height: 50px;
+  padding: 0 10px;
+  margin-bottom: -8px;
+}
+
 main article,
 footer article {
   display: flex;
@@ -409,6 +416,10 @@ footer small a {
   main p {
     font-size: 18px;
   }
+
+  h2 img {
+    display: none;
+  }  
 
   button {
     padding: 16px 32px;
