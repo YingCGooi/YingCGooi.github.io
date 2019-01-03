@@ -115,7 +115,7 @@ h2 img {
   display: inline-block;
   height: 42px;
   padding: 0 10px;
-  margin-bottom: -2px;
+  margin-bottom: -8px;
 }
 
 main article,
@@ -211,7 +211,7 @@ main article {
 }
 
 #other-projects h2 {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 #other-projects h2:not(:first-of-type) {
@@ -447,7 +447,7 @@ footer small a {
   }
 
   h2 img {
-    display: none;
+    height: 36px;
   }
 
   button {
