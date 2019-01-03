@@ -41,9 +41,7 @@
             I am a co-creator and software engineer of <a href="https://spacecraft-repl.com/" target="_blank"> SpaceCraft</a> &mdash; an open-source, in-browser REPL (Read-Evaluate-Print-Loop) that enables real-time collaboration between users.
           </p>
 
-          <a href="/#more">
-            <button>More about me</button>
-          </a>
+          <p><a href="/#more">More about me</a></p>
         </div>
       </article>
     </section>
@@ -60,7 +58,7 @@
             <a href="https://spacecraft-repl.com/" target="_blank">SpaceCraft</a> is an open-source, real-time, collaborative REPL (Read-Evaluate-Print-Loop) that enables pair-programming without any additional setup.
           </p>
           <p>
-            SpaceCraft is built using a Node.js server that manages REPL code evaluation and connects multiple clients through WebSockets. SpaceCraft is deployed with Docker and scaled to handle multiple session using a reverse proxy server.
+            SpaceCraft is built using a Node.js server that manages REPL code evaluation and connects multiple clients through WebSockets. SpaceCraft is deployed with Docker and scaled to handle multiple user sessions using a reverse proxy server.
           </p>
           <p>
             <a href="http://repl.space" target="_blank">Try out the demo here</a>.
@@ -107,17 +105,30 @@
       <article>
         <div class="box first">
           <h4>// Other projects</h4>
-          <h2>Airline Routes<img src="images/react.png" /></h2>
-          <p>
-            A React web application that displays information on routes flown by major airlines. It includes a clickable map to filter routes, which is rewritten in Vanilla JavaScript to to reduce rendering time of 1700 SVG elements from ~400ms to ~60ms.
-          </p>
+          <h2>SpaceCraft: <br class="mobile"/>Proxy Server</h2>
+          <img class="full" src="images/demo.gif" />          
+          <p>A reverse proxy server that integrates with <a href="https://spacecraft-repl.com" target="_blank">SpaceCraft</a>, built from scratch using Node.js and Docker API. It manages multiple user sessions and forwards clients' requests to the appropriate containers.</p>
+
+          <a href="https://spacecraft-repl.com/whitepaper" target="_blank">
+            <button>Read more</button>
+          </a>
+          <div class="spacing"></div>
         </div>
       </article>
       <article>
         <div class="box last">
           <h4 class="placeholder">_</h4>
+
+          <h2>Airline Routes<img src="images/react.png" /></h2>
+          <p>
+            A React web application that displays information on routes flown by major airlines. It includes a clickable map to filter routes, which is rewritten in Vanilla JavaScript to to reduce rendering time of 1700 SVG elements from ~400ms to ~60ms.
+          </p>     
+
           <h2>Coin Exchange<img src="images/ruby.png" /></h2>
-          <p>A Sinatra application that allows users to buy or sell mock digital currencies based on real-time market data. The back-end is integrated with CryptoCompare API to track cryptocurrency prices.</p>
+          <p>A Sinatra application that allows users to buy or sell mocked digital currencies based on real-time market data. The back-end is integrated with CryptoCompare API to track cryptocurrency prices.</p>
+
+          <h2>Ticket Tracker<img src="images/rails.png" /></h2>
+          <p>A Ruby on Rails application that manages tickets by tracking issues and changes. The SQL is optimized from running N + 1 queries to a single SQL query.</p>    
         </div>
       </article>
     </section>

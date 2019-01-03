@@ -7,6 +7,10 @@ body {
   display: none;
 }
 
+.spacing {
+  height: 20px;
+}
+
 /* Top nav bar */
 
 header {
@@ -80,11 +84,11 @@ footer small a {
   border-bottom: 1px solid #ffffff;
 }
 
-#project p a {
+.light p a {
   border-bottom: 1px solid #030c15;
 }
 
-#project p a:hover {
+.light p a:hover {
   background-color: #030c15;
   color: #ffffff;
 }
@@ -109,9 +113,9 @@ footer {
 
 h2 img {
   display: inline-block;
-  height: 50px;
+  height: 42px;
   padding: 0 10px;
-  margin-bottom: -8px;
+  margin-bottom: -2px;
 }
 
 main article,
@@ -197,13 +201,30 @@ main article {
   width: 80%;
 }
 
-#project img {
+#project img, img.full {
   border-radius: 8px;
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 #other-projects {
   align-items: flex-start;
+}
+
+#other-projects h2 {
+  font-size: 40px;
+}
+
+#other-projects h2:not(:first-of-type) {
+  margin-top: 40px;
+}
+
+.full {
+  width: 105%;
+}
+
+#other-projects .full {
+  margin-top: 18px;
+  margin-bottom: 24px;
 }
 
 .box.first {
@@ -312,6 +333,10 @@ footer small a {
   #info .box {
     padding-left: 16%;
   }
+
+  br.mobile {
+    display: block;
+  }  
 }
 
 @media screen and (max-width: 900px) {
@@ -410,6 +435,10 @@ footer small a {
     margin-top: 40px;
     padding: 40px 0 0 0;
   }
+
+  .placeholder {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -419,7 +448,7 @@ footer small a {
 
   h2 img {
     display: none;
-  }  
+  }
 
   button {
     padding: 16px 32px;
@@ -428,6 +457,15 @@ footer small a {
 
   .intro {
     flex-direction: column;
+  }
+
+  div.box {
+    width: 80% !important;
+  }
+
+  img.full {
+    margin-left: -10%;
+    width: 90vw;
   }
 
   #player {
