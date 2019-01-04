@@ -218,6 +218,15 @@ main article {
   margin-top: 40px;
 }
 
+#other-projects article:first-of-type {
+  flex: 6;
+}
+
+#other-projects article:last-of-type {
+  flex: 5;
+}
+
+
 .full {
   width: 105%;
 }
