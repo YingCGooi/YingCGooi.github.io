@@ -464,8 +464,9 @@ footer small a {
   }
 
   img.full {
-    margin-left: -10%;
-    width: 90vw;
+    border-radius: 0px;
+    margin-left: -12.5%;
+    width: 100vw;
   }
 
   #player {
